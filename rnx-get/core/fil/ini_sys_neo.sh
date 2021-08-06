@@ -96,11 +96,11 @@ ini_sys_installer()
 					echo "$1 ---> online install done "
 				else
 					echo "$1 ---> online install error in extraction "
-					exit 1
+					return 1
 				fi
 			else
 				echo "$1 ---> online install error in downloading "
-				exit 1
+				return 2
 			fi
 		else
 			echo "$1 ---> ini_sys installed found "
