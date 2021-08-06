@@ -22,7 +22,7 @@ echo "architecture : $arch "
 case $arch in
 aarch64)
 rnx_tn=rnx-d-cross.tar.gz
-rnx_tar_link=http://rnx.awnto.com/rnx-get/rnx-d/$rnx_tn
+rnx_tar_link=http://rnx-dl.awnto.com/rnx-get/core/fil/rnx-d/$rnx_tn
 #echo -n ""
 #exit 
 
@@ -30,7 +30,7 @@ rnx_tar_link=http://rnx.awnto.com/rnx-get/rnx-d/$rnx_tn
 
 armv7l)
 rnx_tn=rnx-d-cross.tar.gz
-rnx_tar_link=http://rnx.awnto.com/rnx-get/rnx-d/$rnx_tn
+rnx_tar_link=http://rnx-dl.awnto.com/rnx-get/core/fil/rnx-d/$rnx_tn
 #echo -n ""
 #exit 
 
@@ -51,7 +51,7 @@ echo "installing in free mode"
 echo ""
 
 rnx_tn=rnx-d-cross.tar.gz
-rnx_tar_link=http://rnx.awnto.com/rnx-get/rnx-d/$rnx_tn
+rnx_tar_link=http://rnx-dl.awnto.com/rnx-get/core/fil/rnx-d/$rnx_tn
 
 #exit 
 ;;
