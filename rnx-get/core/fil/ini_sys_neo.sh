@@ -57,7 +57,7 @@ ini_sys_installer()
 {
 	# 1=name 2=folder 3=checkfile 4=offline_path 6=url
 	
-	$rnx_busybox rm -rf $RNX_CORE_UDOWN
+	$rnx_busybox rm -rf $RNX_CORE_UDOWN/$1
 	echo "${2}/${3}"
 	if ! [ -f "${2}/${3}" ]
 	then
@@ -108,7 +108,7 @@ ini_sys_installer()
 		
 		
 	fi
-	$rnx_busybox rm -rf $RNX_CORE_UDOWN
+	$rnx_busybox rm -rf $RNX_CORE_UDOWN/$1
 
 }
 
