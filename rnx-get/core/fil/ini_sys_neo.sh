@@ -127,7 +127,7 @@ do
 	#echo "rechecking ..."
 	#sleep 1
 	#exec /data/data/com.awnto.rinix.io/files/assets/data/boot.sh
-	if ini_sys_installer iusr $RNX_CORE_PREFIX "prock" /sdcard/AWN/usr_J.tar.xz http://127.0.0.1:8888/AWN/test/neorepo/usr_J.tar.xz
+	if ini_sys_installer iusr $RNX_CORE_PREFIX "prock" /sdcard/AWN/usr_J.tar.xz http://127.0.0.1:12345/AWN/usr_J.tar.xz
 	then
 		(( ict = 1))
 	fi
