@@ -8,6 +8,8 @@ mkdir -p $pfll
 
 cd $pdir
 
+
+
 if ! [ -f "${HOME}/.awnto/rnx-d/prock" ]
 then
 	#rnx kill
