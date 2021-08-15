@@ -132,7 +132,9 @@ then
 	
 	
 else
-	
+	echo "error try again"
+	echo "or visit : http://rinix.awnto.com/docs"
+
 fi
 
 exit
