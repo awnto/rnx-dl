@@ -31,8 +31,8 @@ ini_sys_finstall()
 		echo CPU_ARCH_[AARCH64]_SUPPORTED > $RNX_CORE_HOME/rnx_tog.txt
 	
 		rnx_busybox=$RNX_NEO_PREFIX/kbin/busybox
-		rnx_iusr_path=/sdcard/AWN/rnx_neo_usr_j_aarch64.tar.xz
-		rnx_iusr_link=rnx-dl-4/neo/iusr/rnx_neo_usr_j_aarch64.tar.xz
+		rnx_iusr_path="/sdcard/AWN/rnx_neo_usr_j_aarch64.tar.xz"
+		rnx_iusr_link="http://rnx-dl-4.awnto.com/neo/iusr/rnx_neo_usr_j_aarch64.tar.xz"
 
 
 		#exit 
