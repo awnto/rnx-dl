@@ -89,7 +89,7 @@ ini_sys_installer()
 			mkdir -p "$2"
 			cd "$2"
 			mkdir -p "${RNX_CORE_UDOWN}"
-			if $rnx_busybox rogg curl -L --output "${RNX_CORE_UDOWN}/${1}" "$5"
+			if rogg curl -L --output "${RNX_CORE_UDOWN}/${1}" "$5"
 			then
 				echo "$1 ---> extracting "
 				if pv "${RNX_CORE_UDOWN}/${1}" | $rnx_busybox tar -xJ 
