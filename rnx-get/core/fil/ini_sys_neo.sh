@@ -31,8 +31,8 @@ ini_sys_finstall()
 		echo CPU_ARCH_[AARCH64]_SUPPORTED > $RNX_CORE_HOME/rnx_tog.txt
 	
 		rnx_busybox=$RNX_NEO_PREFIX/kbin/busybox
-		rnx_iusr_path=/sdcard/AWN/rnx_core_usr_prock_aarch64.tar.xz
-		rnx_iusr_link=http://rnx.awnto.com/rnx-get/files/i_usr/rnx_k9_usr_prock_aarch64.tar.xz
+		rnx_iusr_path=/sdcard/AWN/rnx_neo_usr_j_aarch64.tar.xz
+		rnx_iusr_link=rnx-dl-4/neo/iusr/rnx_neo_usr_j_aarch64.tar.xz
 
 
 		#exit 
@@ -129,7 +129,7 @@ do
 	#echo "rechecking ..."
 	#sleep 1
 	#exec /data/data/com.awnto.rinix.io/files/assets/data/boot.sh
-	if ini_sys_installer iusr $RNX_CORE_PREFIX "prock" /sdcard/AWN/usr_J.tar.xz http://127.0.0.1:12345/AWN/usr_J.tar.xz
+	if ini_sys_installer iusr $RNX_CORE_PREFIX "prock" $rnx_iusr_path $rnx_iusr_link
 	then
 		(( ict = 1))
 	fi
