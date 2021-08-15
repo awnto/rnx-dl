@@ -71,7 +71,7 @@ ini_sys_installer()
 			mkdir -p "$2"
 			cd "$2"
 			echo "$1 ---> extracting "
-			if pv "$4" | $rnx_busybox tar -xJf 
+			if pv "$4" | $rnx_busybox tar -xJ 
 			then
 				echo "$1 ---> offline install done "
 			else
