@@ -10,9 +10,10 @@ cd $pdir
 
 if ! [ -f "${HOME}/.awnto/rnx-d/prock" ]
 then
-	rnx kill
+	#rnx kill
 	rnx update
-	exec rnx login
+	exec rnx boot
+	#exec rnx login
 fi
 
 
