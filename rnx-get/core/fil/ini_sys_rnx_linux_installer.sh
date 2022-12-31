@@ -30,7 +30,8 @@ ini_sys_finstall()
 	
 		rnx_busybox=`which busybox`
 		rnx_linux_path=/sdcard/AWN/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
-		rnx_linux_link=https://gitlab.com/rishabhsarswa/rnx-dl-9/-/raw/main/neo/iusr/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
+		rnx_linux_link=https://gitlab.com/rishabhsarswa/rnx-dl-10/-/raw/main/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
+#rnx_linux_link=https://gitlab.com/rishabhsarswa/rnx-dl-9/-/raw/main/neo/iusr/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
 
 
 		#exit 
