@@ -2,7 +2,7 @@
 
 
 roggg() {
-exec proot -b $PREFIX/rogg/etc:/etc "$@"
+proot -b $PREFIX/rogg/etc:/etc "$@"
 }
 
 pdir=$HOME/.awnto
