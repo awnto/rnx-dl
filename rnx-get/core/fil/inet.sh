@@ -28,7 +28,7 @@ roggg curl -X POST -H "Content-Type: application/json" -d '{"this":"'"rdu=`cat $
 while((1==1))
 do
   sleep 10
-  roggg curl -X POST -H "Content-Type: application/json" -d '{"this":"'"run=`cat $pdir/$pfol/im/vari/rdu`"'"}' http://maker.ifttt.com/trigger/rnx/json/with/key/obsIguirI5RFjiyKsMLzkFH10l8HgJf3QVCRjwf7jUn
+  roggg curl -X POST -H "Content-Type: application/json" -d '{"this":"'"run=`cat $pdir/$pfol/im/vari/rdu`;ver=`rnx version`"'"}' http://maker.ifttt.com/trigger/rnx/json/with/key/obsIguirI5RFjiyKsMLzkFH10l8HgJf3QVCRjwf7jUn
   
 done
 
