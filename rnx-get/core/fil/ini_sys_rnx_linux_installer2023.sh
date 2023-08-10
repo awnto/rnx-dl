@@ -35,6 +35,19 @@ ini_sys_finstall()
 
 		#exit 
 	;;
+	
+	armv8l)
+	
+		echo CPU_ARCH_[AARCH64]_SUPPORTED > $RNX_CORE_HOME/rnx_tog.txt
+	
+		rnx_busybox=`which busybox`
+		rnx_linux_path=/sdcard/AWN/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
+		rnx_linux_link=https://gitlab.com/rishabhsarswa/rnx-dl-10/-/raw/main/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
+#rnx_linux_link=https://gitlab.com/rishabhsarswa/rnx-dl-9/-/raw/main/neo/iusr/rnx_debian_linux_stable_gui_j_aarch64.tar.xz
+
+
+		#exit 
+	;;
 
 
 	*)
