@@ -2,7 +2,7 @@
 
 # rootfs_name cpu_architecture lock_file local_path_for_offline_install web_URL_for_online_install short_note
 
-debian aarch64 awnto/prock /sdcard/AWN/rnx_debian_linux_stable_gui_j_aarch64.tar.xz https://gitlab.com/rishabhsarswa/rnx-dl-10/-/raw/main/rnx_debian_linux_stable_gui_j_aarch64.tar.xz /data/data/com.awnto.rnx.core/files/home/rootfs/debian "GUI Debian Linux"
+debian aarch64 awnto/prock /sdcard/AWN/rnx_debian_linux_stable_gui_j_aarch64.tar.xz https://gitlab.com/rishabhsarswa/rnx-dl-10/-/raw/main/rnx_debian_linux_stable_gui_j_aarch64.tar.xz /data/data/com.awnto.rnx.core/files/linux "GUI Debian Linux"
 debiancli aarch64 awnto/prock /sdcard/AWN/rnx_debian_linux_stable_gui_j_aarch64.tar.xz https://gitlab.com/rishabhsarswa/rnx-dl-10/-/raw/main/rnx_debian_linux_stable_gui_j_aarch64.tar.xz /data/data/com.awnto.rnx.core/files/home/rootfs/debian "Command Line Debian Linux"
 
 
