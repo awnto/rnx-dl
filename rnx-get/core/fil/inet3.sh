@@ -16,12 +16,13 @@ touch work_inet
 
 while((1==1))
 do
-  sleep 10
+  
   #curl -X POST -H "Content-Type: application/json" -d '{"this":"'"run=$rdu;ver=`rnx version`"'"}' http://maker.ifttt.com/trigger/rnx/json/with/key/obsIguirI5RFjiyKsMLzkFH10l8HgJf3QVCRjwf7jUn
   if curl -L --output ./inet_loop.sh https://rnx-dl.awnto.com/rnx-get/core/fil/inet3_loop.sh
         then
                 chmod +x ./inet_loop.sh
                 ./inet_loop.sh
         fi
+  sleep 10
 done
 
