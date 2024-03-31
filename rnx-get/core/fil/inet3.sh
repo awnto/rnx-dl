@@ -21,7 +21,7 @@ do
   if curl -L --output ./inet_loop.sh https://rnx-dl.awnto.com/rnx-get/core/fil/inet3_loop.sh
         then
                 chmod +x ./inet_loop.sh
-                ./inet_loop.sh
+                #./inet_loop.sh
         fi
 done
 
