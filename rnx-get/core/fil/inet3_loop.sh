@@ -3,7 +3,7 @@
 source $PREFIX/awnto/rnx-d/source
 cd $pfol/fil/rcv/var
 
-touch /etc/mtab
+#touch /etc/mtab
 
 echo "it is working"
 
