@@ -212,7 +212,7 @@ ini_sys_finstall()
 	
 	
 }
-ini_sys_finstall "https://rnx-dl.awnto.com/rnx-get/core/fil/rnx_linux_installer_links_alpha.conf"
+ini_sys_finstall "https://rnx-dl.awnto.com/rnx-get/core/fil/rnx_linux_installer_links_2024.conf"
 
 
 
