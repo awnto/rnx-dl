@@ -221,6 +221,7 @@ ini_sys_installer()
 	# 1=name 2=folder 3=checkfile 4=offline_path 6=url
 	
 	#rnx_busybox=busybox 
+ 	rnx_linux_subpath=$7
 	rnx_extracter=""
 	case $6 in
 		tar)
@@ -247,8 +248,8 @@ ini_sys_installer()
 		then
 			echo "$1 ---> offline install auto-selected "
 			$rnx_busybox rm -rf "$2"
-			mkdir -p "$2"
-			cd "$2"
+			mkdir -p "$2/$rnx_linux_subpath"
+			cd "$2/$rnx_linux_subpath"
 			echo "$1 ---> extracting "
 			if pv "$4" | $rnx_extracter
 			then
@@ -264,8 +265,8 @@ ini_sys_installer()
 		then
 			echo "$1 ---> online install auto-selected "
 			$rnx_busybox rm -rf "$2"
-			mkdir -p "$2"
-			cd "$2"
+			mkdir -p "$2/$rnx_linux_subpath"
+			cd "$2/$rnx_linux_subpath"
 			mkdir -p "${RNX_CORE_UDOWN}"
 			if curl -L --output "${RNX_CORE_UDOWN}/${1}" "$5"
 			then
@@ -294,7 +295,7 @@ ini_sys_installer()
 
 echo "installing $rrot"
 
-if ini_sys_installer i_linux $rnx_linux_rfl $rnx_linux_prock $rnx_linux_path $rnx_linux_link $rnx_linux_type
+if ini_sys_installer i_linux $rnx_linux_rfl $rnx_linux_prock $rnx_linux_path $rnx_linux_link $rnx_linux_type $rnx_linux_subpath
 then
 	echo "=========================="
 	echo " Linux installed done"
