@@ -35,6 +35,11 @@ get_n7( )
 	echo $7
 }
 
+get_n8( )
+{
+	echo $8
+}
+
 
 
 ini_sys_finstall()
