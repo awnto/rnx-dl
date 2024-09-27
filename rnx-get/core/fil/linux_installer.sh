@@ -154,7 +154,7 @@ ini_sys_finstall()
 		rrot=$(cat $HOME/.awnto/vari/rdistro)
 	else
 		echo ""
-		echo "type rootfs name example : debian"
+		echo "type rootfs name example : debian-cli"
 		echo -n "--> "
 		read -r rrot
 	fi
