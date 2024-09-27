@@ -270,7 +270,7 @@ ini_sys_installer()
 			if curl -L --output "${RNX_CORE_UDOWN}/${1}" "$5"
 			then
 				echo "$1 ---> extracting "
-				if pv "${RNX_CORE_UDOWN}/${1}" | $rnx_busybox $rnx_extracter
+				if pv "${RNX_CORE_UDOWN}/${1}" | $rnx_extracter
 				then
 					echo "$1 ---> online install done "
 				else
