@@ -101,7 +101,7 @@ ini_sys_finstall()
 			echo "	Path 	: $(get_n4 $line)"
 			echo "	URL 	: $(get_n5 $line)"
 			echo "	ROOT 	: $(get_n6 $line)"
-			echo "	TYPE 	: $(get_n7 $line)"
+			echo "	TYPE 	: $(get_n8 $line)"
 			echo ""
 		
 		fi
@@ -178,7 +178,7 @@ ini_sys_finstall()
 			echo "	Path 	: $(get_n4 $line)"
 			echo "	URL 	: $(get_n5 $line)"
 			echo "	ROOT 	: $(get_n6 $line)"
-			echo "	TYPE 	: $(get_n7 $line)"
+			echo "	TYPE 	: $(get_n8 $line)"
 			echo ""
 			
 			
@@ -187,7 +187,7 @@ ini_sys_finstall()
 			rnx_linux_link="$(get_n5 $line)"
 			rnx_linux_prock="$(get_n3 $line)"
 			rnx_linux_rfl="$(get_n6 $line)"
-			rnx_linux_type="$(get_n7 $line)"
+			rnx_linux_type="$(get_n8 $line)"
 			
 			mkdir -p $HOME/.awnto/vari
 			echo "$rrot" > $HOME/.awnto/vari/rdistro
