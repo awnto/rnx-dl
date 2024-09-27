@@ -191,7 +191,7 @@ ini_sys_finstall()
 			
 			mkdir -p $HOME/.awnto/vari
 			echo "$rrot" > $HOME/.awnto/vari/rdistro
-			echo "$rnx_linux_rfl" > ${HOME}/.awnto/vari/rnx_rfl
+			echo "$rnx_linux_rfl/$rnx_linux_subpath" > ${HOME}/.awnto/vari/rnx_rfl
 			break ;
 			#exit
 			#g_one_install
@@ -221,7 +221,6 @@ ini_sys_installer()
 	# 1=name 2=folder 3=checkfile 4=offline_path 6=url
 	
 	#rnx_busybox=busybox 
- 	rnx_linux_subpath=$7
 	rnx_extracter=""
 	case $6 in
 		tar)
@@ -248,8 +247,8 @@ ini_sys_installer()
 		then
 			echo "$1 ---> offline install auto-selected "
 			$rnx_busybox rm -rf "$2"
-			mkdir -p "$2/$rnx_linux_subpath"
-			cd "$2/$rnx_linux_subpath"
+			mkdir -p "$2"
+			cd "$2"
 			echo "$1 ---> extracting "
 			if pv "$4" | $rnx_extracter
 			then
@@ -265,8 +264,8 @@ ini_sys_installer()
 		then
 			echo "$1 ---> online install auto-selected "
 			$rnx_busybox rm -rf "$2"
-			mkdir -p "$2/$rnx_linux_subpath"
-			cd "$2/$rnx_linux_subpath"
+			mkdir -p "$2"
+			cd "$2"
 			mkdir -p "${RNX_CORE_UDOWN}"
 			if curl -L --output "${RNX_CORE_UDOWN}/${1}" "$5"
 			then
@@ -295,7 +294,7 @@ ini_sys_installer()
 
 echo "installing $rrot"
 
-if ini_sys_installer i_linux $rnx_linux_rfl $rnx_linux_prock $rnx_linux_path $rnx_linux_link $rnx_linux_type $rnx_linux_subpath
+if ini_sys_installer i_linux $rnx_linux_rfl $rnx_linux_prock $rnx_linux_path $rnx_linux_link $rnx_linux_type
 then
 	echo "=========================="
 	echo " Linux installed done"
