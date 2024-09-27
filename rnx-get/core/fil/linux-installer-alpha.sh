@@ -110,11 +110,6 @@ ini_sys_finstall()
 	
 	
 	#rnx_arch="aarch64"
-	if [[ $rnx_arch == "armv8l" ]] ;
-	then
-		rnx_arch="aarch64"
-	fi
-	
 	
 	echo ""
 	echo "your cpu is : $rnx_arch : `uname -m` "
