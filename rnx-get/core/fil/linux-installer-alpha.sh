@@ -222,7 +222,7 @@ ini_sys_installer()
 	
 	#rnx_busybox=busybox 
 	rnx_extracter=""
-	case $5 in
+	case $6 in
 		tar)
 			rnx_extracter="tar -xJ"
 			;;
