@@ -39,6 +39,10 @@ get_n8( )
 {
 	echo $8
 }
+get_n9( )
+{
+	echo $9
+}
 
 
 
@@ -183,6 +187,7 @@ ini_sys_finstall()
 			rnx_linux_prock="$(get_n3 $line)"
 			rnx_linux_rfl="$(get_n6 $line)"
 			rnx_linux_type="$(get_n8 $line)"
+			rnx_linux_subpath="$(get_n9 $line)"
 			
 			mkdir -p $HOME/.awnto/vari
 			echo "$rrot" > $HOME/.awnto/vari/rdistro
