@@ -224,10 +224,10 @@ ini_sys_installer()
 	rnx_extracter=""
 	case $6 in
 		tar)
-			rnx_extracter="tar -xJ"
+			rnx_extracter="$rnx_busybox tar -xJ"
 			;;
 		tar-sym)
-			rnx_extracter="--link2symlink tar -xJ"
+			rnx_extracter="proot --link2symlink $rnx_busybox tar -xJ"
 			;;
 		*)
 			echo "extracter $5 is not valid"
@@ -250,7 +250,7 @@ ini_sys_installer()
 			mkdir -p "$2"
 			cd "$2"
 			echo "$1 ---> extracting "
-			if pv "$4" | $rnx_busybox $rnx_extracter
+			if pv "$4" | $rnx_extracter
 			then
 				echo "$1 ---> offline install done "
 			else
