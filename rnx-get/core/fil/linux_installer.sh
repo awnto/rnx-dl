@@ -267,7 +267,7 @@ ini_sys_installer()
 	esac
 	
 	
-	$rnx_busybox rm -rf $RNX_CORE_UDOWN/$1
+	#$rnx_busybox rm -rf $RNX_CORE_UDOWN/$1
 	echo "${2}/${3}"
 	if ! [ -f "${2}/${3}" ]
 	then
