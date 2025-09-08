@@ -44,6 +44,25 @@ get_n9( )
 	echo $9
 }
 
+curl_a()
+{
+
+	url="$1"
+	file="$2"
+
+	if [ -f "$file" ] 
+	then
+		curl -L -r $(stat -c%s "$file")- -o "$file".2 "$url"
+		echo "Joining $file"
+
+		cat "$file" "$file".2 > "$file".3
+		rm "$file" "$file"
+
+		mv "$file".3 "$file"
+	else
+		curl -L -o "$file" "$url"
+	fi
+}
 
 
 ini_sys_finstall()
@@ -267,7 +286,7 @@ ini_sys_installer()
 			mkdir -p "$2"
 			cd "$2"
 			mkdir -p "${RNX_CORE_UDOWN}"
-			if curl -L --output "${RNX_CORE_UDOWN}/${1}" "$5"
+			if curl_a "$5" "${RNX_CORE_UDOWN}/${1}" 
 			then
 				echo "$1 ---> extracting "
 				if pv "${RNX_CORE_UDOWN}/${1}" | $rnx_extracter
