@@ -50,9 +50,9 @@ curl_a()
 	url="$1"
 	file="$2"
 
-	if [ -f "$file" ] 
+	if [ -f $file ] 
 	then
- 		echo "Resuming File"
+ 		echo "Resuming File $file"
 		curl -L -r $(stat -c%s "$file")- -o "$file".2 "$url"
 		echo "Joining $file"
 
@@ -61,7 +61,7 @@ curl_a()
 
 		mv "$file".3 "$file"
 	else
- 		echo "Downloading File"
+ 		echo "Downloading File $file"
 		curl -L -o "$file" "$url"
 	fi
 }
