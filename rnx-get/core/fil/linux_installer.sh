@@ -61,6 +61,7 @@ curl_a()
 
 		mv "$file".3 "$file"
 	else
+ 		echo "Downloading File"
 		curl -L -o "$file" "$url"
 	fi
 }
