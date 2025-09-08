@@ -1,0 +1,23 @@
+#!/data/data/com.awnto.rnx.core/files/usr/kbin/bash
+
+
+RNX_CORE_UDOWN=/data/data/com.awnto.rnx.core/files/home/uDown
+
+mkdir -p $RNX_CORE_UDOWN
+
+cd $RNX_CORE_UDOWN
+
+	ilinks=$(curl -L "https://rnx-dl.awnto.com/rnx-get/core/fil/linux_installer.sh" 2> /dev/null )
+	
+	if [[ $ilinks == "" ]]
+	then
+		echo "error in fetching from internet "
+		exit 13 ;
+	fi
+	
+echo "$ilinks" > linux_installer.sh
+
+exec bash linux_installer.sh
+	
+	
+
