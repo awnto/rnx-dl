@@ -53,13 +53,23 @@ curl_a()
 	if [ -f $file ] 
 	then
  		echo "Resuming File $file"
-		curl -L -r $(stat -c%s "$file")- -o "$file".2 "$url"
+		if curl -L -r $(stat -c%s "$file")- -o "$file".2 "$url"
+  		then
 		echo "Joining $file"
 
 		cat "$file" "$file".2 > "$file".3
 		rm "$file" "$file"
 
 		mv "$file".3 "$file"
+ 		else
+		echo "error Joining $file"
+
+		cat "$file" "$file".2 > "$file".3
+		rm "$file" "$file"
+
+		mv "$file".3 "$file"
+  		exit 1
+  		fi
 	else
  		echo "Downloading File $file"
 		curl -L -o "$file" "$url"
