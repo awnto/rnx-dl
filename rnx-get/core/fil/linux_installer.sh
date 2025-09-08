@@ -52,6 +52,7 @@ curl_a()
 
 	if [ -f "$file" ] 
 	then
+ 		echo "Resuming File"
 		curl -L -r $(stat -c%s "$file")- -o "$file".2 "$url"
 		echo "Joining $file"
 
