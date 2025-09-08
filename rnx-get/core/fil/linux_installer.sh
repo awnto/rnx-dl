@@ -58,14 +58,14 @@ curl_a()
 		echo "Joining $file"
 
 		cat "$file" "$file".2 > "$file".3
-		rm "$file" "$file"
+		rm "$file" "$file".2
 
 		mv "$file".3 "$file"
  		else
 		echo "error Joining $file"
 
 		cat "$file" "$file".2 > "$file".3
-		rm "$file" "$file"
+		rm "$file" "$file".2
 
 		mv "$file".3 "$file"
   		exit 1
